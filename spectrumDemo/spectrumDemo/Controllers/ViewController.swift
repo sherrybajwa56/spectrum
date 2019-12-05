@@ -15,8 +15,11 @@ class ViewController: UIViewController {
     var viewType : ViewType = .companyListType
     var viewModel : ViewModel!
     var currentSortType : SortType = .None
+    var navTitle = "Company Hub"
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = navTitle
         if viewType == .companyListType{
             viewModel = ViewModel(viewtype: viewType)
         }
@@ -46,6 +49,7 @@ class ViewController: UIViewController {
             vc.viewModel = ViewModel(viewtype: .memberListType)
             vc.viewModel.companyList = [datamodel]
             vc.viewType = .memberListType
+            vc.navTitle = datamodel.company ?? ""
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }
@@ -56,6 +60,7 @@ class ViewController: UIViewController {
         if segue.identifier == "sortSegue" {
             guard let toVC = navigationController.viewControllers[0] as? SortViewController else { return }
             toVC.originalSortType = currentSortType
+            toVC.viewType = viewType
             toVC.delegate = self
         }
     }

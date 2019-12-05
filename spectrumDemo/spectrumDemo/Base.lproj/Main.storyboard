@@ -293,7 +293,7 @@
                 <searchBar contentMode="redraw" showsCancelButton="YES" id="LAO-zz-YKg">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                    <color key="tintColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="tintColor" white="0.77000000000000002" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <color key="barTintColor" red="0.4392156862745098" green="0.11754338834507039" blue="0.571715448943662" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <textInputTraits key="textInputTraits"/>
                     <connections>

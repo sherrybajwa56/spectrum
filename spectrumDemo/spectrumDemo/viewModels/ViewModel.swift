@@ -22,13 +22,13 @@ public func displayString() -> String
            {
                switch self {
                case .nameAscending:
-                   return "ByName (A-Z)"
+                   return "By Name (A-Z)"
                case .nameDecending:
-                   return "ByName (Z-A)"
+                   return "By Name (Z-A)"
                case .AgeAcending:
-                   return "ByAge (younger - older)"
+                   return "By Age (younger-older)"
                case .AgeDecending:
-                   return "ByAge (older - younger)"
+                   return "By Age (older-younger)"
                case .None:
                 return ""
             }

@@ -17,13 +17,14 @@ import UIKit
     {
         weak var delegate: SortDelegate?
         var originalSortType: SortType!
-
-        var sortTypes: [SortType] = [.AgeAcending ,.AgeDecending , .nameAscending , .nameDecending]
+        var viewType : ViewType = .companyListType
+        var sortTypes: [SortType] = []
         
         // MARK: - View Lifecycle
         override func viewDidLoad()
         {
             super.viewDidLoad()
+            sortTypes = viewType == .companyListType ? [.nameAscending , .nameDecending] : [.AgeAcending ,.AgeDecending , .nameAscending , .nameDecending]
             configureAppearance()
           
               //  sortTypes = CatalogManager.SearchParameters.SortType.categorySortCases
